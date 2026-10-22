@@ -8,9 +8,17 @@ Supports workflows involving local folders, iCloud Drive, and iCloud Photos when
 
 ## Install
 
-Copy `skills/video-storytelling` into your Codex skills directory (normally `~/.codex/skills/`). Keep the folder and its `references` together. Alternatively, ask your skill installer to install `skills/video-storytelling` from this repository. No other personal skill is required.
+Ask Codex: "Use $skill-installer to install skills/video-storytelling from https://github.com/vibecodingengine/video-storytelling-skill."
+
+For manual installation, copy `skills/video-storytelling` to `~/.agents/skills/video-storytelling` for user-wide use, or to `.agents/skills/video-storytelling` in your project for project-local use. Keep `SKILL.md` and `references/` together; do not copy the entire repository as the skill folder. Preserve any existing installation before replacing it. These are portable user-relative locations, not paths on the author's machine. See [official skill documentation](https://learn.chatgpt.com/docs/build-skills) for discovery locations supported by your version. If the skill does not appear, restart Codex. No other personal skill is required.
 
 This repository contains agent instructions, not an editor, speech engine, or iCloud connector. Actual editing needs media tools such as FFmpeg/ffprobe, a suitable transcription engine when speech matters, and a TTS engine if narration is requested. Photos discovery needs macOS Photos access or an exported folder. The agent should inspect available tools and explain missing capabilities. No paid API is mandatory.
+
+## First-run check
+
+Ask: "Use $video-storytelling to check your available tools and read its bundled references. Do not edit or upload anything yet."
+
+The agent should confirm source access, media inspection/rendering tools, visual/audio inspection capability, and any required transcription or voice engine. Missing tools should produce a concrete setup or fallback proposal, not a claim that editing succeeded. On systems without Photos access, use exported local files. This check verifies readiness; it is not an end-to-end video test.
 
 ## Example request
 

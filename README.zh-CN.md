@@ -6,7 +6,17 @@
 
 ## 安装和使用
 
-将 `skills/video-storytelling` 整个目录复制到 Codex 的 skills 目录（通常是 `~/.codex/skills/`），保留其中的 `references`。也可以让 skill 安装工具从此仓库安装该目录。
+可以直接对 Codex 说：
+
+> 用 $skill-installer 从 https://github.com/vibecodingengine/video-storytelling-skill 安装 skills/video-storytelling。
+
+手动安装时，将 `skills/video-storytelling` 复制到用户级目录 `~/.agents/skills/video-storytelling`，或项目内的 `.agents/skills/video-storytelling`。保留 `SKILL.md` 和 `references/`，不要把整个仓库当成 skill 文件夹复制。已有同名安装时先保留旧版。这些是使用者自己的相对目录，不是作者本机路径；不同版本的发现位置以[官方文档](https://learn.chatgpt.com/docs/build-skills)为准。安装后未出现时重启 Codex。
+
+首次使用可先说：
+
+> 用 $video-storytelling 检查可用工具，并读取它自带的参考文件。暂时不要剪辑或上传任何内容。
+
+它应核对素材访问、媒体探测与渲染、画面和音频检查，以及按需使用的转写或配音引擎。缺少工具时应提出具体配置或替代方案；没有 Photos 访问能力时使用导出的本地文件。此检查用于确认运行条件，不等同于完整成片测试。
 
 示例：
 

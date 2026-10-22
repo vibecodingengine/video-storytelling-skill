@@ -15,6 +15,10 @@ Keep source speech language, narration language, subtitle languages, and convers
 
 Use an output directory outside this installed skill and outside any public repository. Record approvals against exact versions; approval of a plan is not approval of newly written narration. Existing explicit approvals remain valid unless the relevant content changes.
 
+Before promising an edit, check the current environment for source access, media probing/rendering (for example `ffprobe` and `ffmpeg`), frame inspection, audio inspection, and writable private project storage. Check a transcription engine only when speech requires it, and a synthesis engine only when narration is wanted. Resolve executables from the environment; do not assume a package-manager path, GPU, operating system, model cache, credentials, or another installed skill. Resolve this skill's reference links relative to this `SKILL.md`, not the current working directory.
+
+If a required capability is missing, explain the specific gap and propose a compatible setup or fallback within the user's permissions. Continue independent analysis when possible; do not claim inaccessible media was inspected. With no narration, skip both script approval and voice generation, and build timing around selected footage and original audio. An instruction-only installation does not install media tools or model weights.
+
 ## 1. Discover and inspect footage
 
 Search the user-authorized folder, album, date range, or event. When “iCloud” is ambiguous, use available context and a narrow inspection to distinguish Photos from Drive; ask only if that remains unresolved. Read [source-discovery.md](references/source-discovery.md) for iCloud or Photos.
